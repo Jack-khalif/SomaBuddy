@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dyslexia-friendly font fallback */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/opendyslexic@1.0.3/OpenDyslexic-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .dyslexic-font {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', cursive;
+  }
+  
+  .child-font {
+    font-family: 'Fredoka One', 'Comic Sans MS', cursive;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+  }
+  
+  .btn-success {
+    @apply bg-success-500 hover:bg-success-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-100;
+  }
+  
+  .text-highlight {
+    @apply bg-yellow-200 px-1 rounded transition-all duration-300;
+  }
+  
+  .text-highlight-active {
+    @apply bg-yellow-400 px-1 rounded scale-110 font-bold;
+  }
+  
+  .reading-text {
+    @apply text-lg leading-relaxed;
+  }
+  
+  .reading-text-large {
+    @apply text-2xl leading-relaxed;
+  }
+  
+  .reading-text-huge {
+    @apply text-4xl leading-relaxed;
+  }
+}
+
+/* Custom animations */
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 1s ease-in-out infinite;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+/* High contrast mode */
+.high-contrast {
+  filter: contrast(150%) brightness(110%);
+}
+
+.high-contrast .card {
+  @apply border-2 border-gray-800;
+}
+
+.high-contrast .text-highlight {
+  @apply bg-yellow-300 border border-yellow-600;
+}
+
+.high-contrast .text-highlight-active {
+  @apply bg-yellow-500 border-2 border-yellow-800;
+}
