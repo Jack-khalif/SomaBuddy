@@ -1,4 +1,4 @@
-# SomaBuddy 📚✨
+# SomaBuddy 
 
 **"Dyslexia is no disorder, dyslexics think differently."**
 
@@ -6,17 +6,17 @@ A dyslexia-friendly reading app designed for Kenyan children, providing multisen
 
 ## Features
 
-- 🎧 **Text-to-Speech**: Listen to books read aloud with Google TTS
-- 🎤 **Speech-to-Text**: Practice pronunciation with Whisper/Vosk feedback
-- 🌈 **Visual Aids**: Color highlighting, adjustable fonts, text chunking
-- 📖 **Text Input**: Upload books or paste text directly
-- ⭐ **Engagement**: Reward system and shared reading mode
-- 📚 **Library**: Simple catalogue of Kenyan syllabus books
+-  **Text-to-Speech**: Listen to books read aloud with Google TTS
+-  **Speech-to-Text**: Practice pronunciation with Whisper/Vosk feedback
+-  **Visual Aids**: Color highlighting, adjustable fonts, text chunking
+-  **Text Input**: Upload books or paste text directly
+-  **Engagement**: Reward system and shared reading mode
+-  **Library**:  catalogue of Kenyan syllabus books
 
 ## Tech Stack
 
 - **Frontend**: React with Tailwind CSS
-- **Backend**: Express.js
+- **Backend**: Python.FastAPI
 - **AI/ML**: TensorFlow.js, Whisper/Vosk, Google TTS
 - **Deployment**: Vercel/Render ready
 
@@ -49,6 +49,3 @@ somabuddy/
 5. Visual aids help with comprehension
 6. Child earns rewards for effort
 
-## Contributing
-
-Built for the DevOps Hackathon - focusing on accessibility and inclusive education for African learners.
